@@ -52,3 +52,5 @@ Hasta el final del menú se encuentra el boton **RESET** que devuelve la marione
 ## Objetivos no logrados
 
 No pude implementar el stack de ***Undo/Redo*** ya que me quedé sin tiempo, pero ImGUI es capaz de detectar los inicios y los finales de los cambios a cada una de sus componentes gráficas. Ya que solo se hace una operación a la vez siempre, puedo guardar su operación inversa (Lo cual es muy sencillo ya que solo son rotaciones y traslaciones sobre un solo eje) de manera que al hacer ***Undo*** simplemente se hace `Model::nodeUpdate()` con la inversa de la operación hasta arriba del stack (la última en hacerse). Luego, se pasa la inversa de la inversa a otro stack (el stack redo) y al llamarlo, se hace lo mismo que para ***Undo*** pero con la información de este otro stack.
+
+Hola
